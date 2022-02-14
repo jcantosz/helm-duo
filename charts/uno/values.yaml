@@ -4,11 +4,13 @@
 
 replicaCount: 3
 
+# blue/green
+
 image:
-  repository: quay.io/codefresh_sa/ctrlr
+  repository: quay.io/codefresh_sa/express-microservice
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "6b201de"
+  tag: "e0cb675"
 
 imagePullSecrets: []
 nameOverride: ""

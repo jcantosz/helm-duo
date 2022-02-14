@@ -7,10 +7,10 @@ replicaCount: 5
 # canary
 
 image:
-  repository: quay.io/codefresh_sa/buslog
+  repository: quay.io/codefresh_sa/express-microservice
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "e5f1357"
+  tag: "e0cb675"
 
 imagePullSecrets: []
 nameOverride: ""
