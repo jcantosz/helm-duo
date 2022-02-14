@@ -1,0 +1,21 @@
+# Parent Argo CD app (grouping) for the flaskr apps
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: duo-deploy-dev
+  labels:
+    app: duo-deploy
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: csdp01-us-east-2  # required field - set to your CF Runtume namespace
+    name: in-cluster
+  project: duo-deploy
+  source:
+    path: ./charts/duo-umbrella  # Directory that contains the child apps
+    repoURL: https://github.com/jcantosz/helm-duo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
