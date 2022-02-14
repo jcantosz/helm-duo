@@ -21,18 +21,13 @@ spec:
       canaryService: {{ template "dos.fullname" . }}-preview
       steps:
       - setWeight: 20
-      - pause:
-          duration: 10
+      - pause: {duration: 10}
       - setWeight: 40
-      - pause:
-          duration: 10
+      - pause: {duration: 10}
       - setWeight: 60
-      - pause:
-          duration: 10
+      - pause: {duration: 10}
       - setWeight: 80
-      - pause:
-          duration: 10
-      - setWeight: 100
+      - pause: {duration: 10}
   template:
     metadata:
       labels:
