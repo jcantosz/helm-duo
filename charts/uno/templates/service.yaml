@@ -19,7 +19,7 @@ spec:
     app: {{ template "uno.name" . }}
     release: {{ .Release.Name }}
 ---
-apiVersion: v1pwd
+apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "uno.fullname" . }}-preview
