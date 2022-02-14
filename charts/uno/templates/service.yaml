@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "uno.fullname" . }}
+  labels:
+    app: {{ template "uno.name" . }}
+    chart: {{ template "uno.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "uno.name" . }}
+    release: {{ .Release.Name }}
+---
+apiVersion: v1pwd
+kind: Service
+metadata:
+  name: {{ template "uno.fullname" . }}-preview
+  labels:
+    app: {{ template "uno.name" . }}
+    chart: {{ template "uno.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "uno.name" . }}
+    release: {{ .Release.Name }}
