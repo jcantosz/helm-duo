@@ -1,8 +1,8 @@
-# ctrlr
+# ctrlr, blue/green
 uno:
   image:
     tag: e5f1357
-# buslog
+# buslog, canary
 dos:
   image:
     tag: 6b201de

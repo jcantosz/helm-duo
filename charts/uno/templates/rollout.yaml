@@ -1,5 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
+# https://argoproj.github.io/argo-rollouts/features/specification/
 metadata:
   name: {{ template "uno.fullname" . }}
   labels:
