@@ -19,7 +19,7 @@ spec:
     blueGreen:
       activeService: {{ template "uno.fullname" . }}
       previewService: {{ template "uno.fullname" . }}-preview
-      autoPromotionSeconds: 1800
+      autoPromotionSeconds: 1800 # 30 min
   template:
     metadata:
       labels:
