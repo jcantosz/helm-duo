@@ -8,7 +8,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: prometheus
+    namespace: monitoring
     name: in-cluster
   project: default
   source:
