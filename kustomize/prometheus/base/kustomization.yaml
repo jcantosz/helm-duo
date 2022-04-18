@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- serviceAccount.yaml
+- github.com/prometheus-operator/kube-prometheus?ref=v0.10.0
+- serviceMonitor.yaml
+#- github.com/codefresh-io/cli-v2/manifests/argo-workflows?ref=v0.0.301
